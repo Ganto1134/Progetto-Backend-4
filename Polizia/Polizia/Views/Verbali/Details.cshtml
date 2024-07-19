@@ -1,0 +1,66 @@
+﻿@model Polizia.Models.Verbale
+
+@{
+    ViewData["Title"] = "Details Verbale";
+}
+
+<h1>Details Verbale</h1>
+
+<div>
+    <h4>Verbale</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.IdAnagrafica)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IdAnagrafica)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.IdViolazione)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IdViolazione)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DataViolazione)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DataViolazione)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.IndirizzoViolazione)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IndirizzoViolazione)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Nominativo_Agente)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Nominativo_Agente)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DataTrascrizioneVerbale)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DataTrascrizioneVerbale)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Importo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Importo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DecurtamentoPunti)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DecurtamentoPunti)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model.IdVerbale">Edit</a> |
+    <a class="btn btn-primary" asp-action="Index">Back to List</a>
+</div>

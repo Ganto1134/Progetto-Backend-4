@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Reports";
+}
+
+<h1>Reports</h1>
+
+<ul>
+    <li><a asp-controller="Reports" asp-action="VerbaliPerTrasgressore">Totale dei verbali trascritti raggruppati per trasgressore</a></li>
+    <li><a asp-controller="Reports" asp-action="PuntiDecurtatiPerTrasgressore">Totale dei punti decurtati raggruppati per trasgressore</a></li>
+    <li><a asp-controller="Reports" asp-action="ViolazioniConPiuDiDieciPunti">Violazioni che superano i 10 punti</a></li>
+    <li><a asp-controller="Reports" asp-action="ViolazioniConImportoMaggioreDiQuattrocento">Violazioni con importo maggiore di 400 euro</a></li>
+</ul>

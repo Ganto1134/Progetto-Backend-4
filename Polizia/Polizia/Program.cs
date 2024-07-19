@@ -5,8 +5,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddSingleton<TipoViolazioneDAO>();
 builder.Services.AddSingleton<AnagraficaDAO>();
+builder.Services.AddSingleton<TipoViolazioneDAO>();
+builder.Services.AddSingleton<VerbaleDAO>();
 
 var app = builder.Build();
 

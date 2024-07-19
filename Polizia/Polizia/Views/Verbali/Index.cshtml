@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Polizia.Models.Verbale>
+
+@{
+    ViewData["Title"] = "Verbali";
+}
+
+<h1>Verbali</h1>
+
+<p>
+    <a class="btn btn-primary" asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.IdAnagrafica)</th>
+            <th>@Html.DisplayNameFor(model => model.IdViolazione)</th>
+            <th>@Html.DisplayNameFor(model => model.DataViolazione)</th>
+            <th>@Html.DisplayNameFor(model => model.IndirizzoViolazione)</th>
+            <th>@Html.DisplayNameFor(model => model.Nominativo_Agente)</th>
+            <th>@Html.DisplayNameFor(model => model.DataTrascrizioneVerbale)</th>
+            <th>@Html.DisplayNameFor(model => model.Importo)</th>
+            <th>@Html.DisplayNameFor(model => model.DecurtamentoPunti)</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.IdAnagrafica)</td>
+                <td>@Html.DisplayFor(modelItem => item.IdViolazione)</td>
+                <td>@Html.DisplayFor(modelItem => item.DataViolazione)</td>
+                <td>@Html.DisplayFor(modelItem => item.IndirizzoViolazione)</td>
+                <td>@Html.DisplayFor(modelItem => item.Nominativo_Agente)</td>
+                <td>@Html.DisplayFor(modelItem => item.DataTrascrizioneVerbale)</td>
+                <td>@Html.DisplayFor(modelItem => item.Importo)</td>
+                <td>@Html.DisplayFor(modelItem => item.DecurtamentoPunti)</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.IdVerbale">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.IdVerbale">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.IdVerbale">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

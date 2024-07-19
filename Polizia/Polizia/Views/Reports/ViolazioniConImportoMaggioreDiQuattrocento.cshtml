@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Polizia.Models.Verbale>
+
+@{
+    ViewData["Title"] = "Violazioni Con Importo Maggiore Di Quattrocento";
+}
+
+<h1>Violazioni Con Importo Maggiore Di Quattrocento</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Importo</th>
+            <th>Data Violazione</th>
+            <th>Decurtamento Punti</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Importo</td>
+                <td>@item.DataViolazione.ToShortDateString()</td>
+                <td>@item.DecurtamentoPunti</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
