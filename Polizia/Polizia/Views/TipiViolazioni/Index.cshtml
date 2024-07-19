@@ -7,7 +7,7 @@
 <h1>Tipi di Violazioni</h1>
 
 <p>
-    <a class="btn btn-primary" asp-action="Create">Create New</a>
+    <a class="btn btn-primary" asp-action="Create">Crea Nuovo</a>
 </p>
 <table class="table">
     <thead>
@@ -26,9 +26,9 @@
                     @Html.DisplayFor(modelItem => item.Descrizione)
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.IdViolazione">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.IdViolazione">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.IdViolazione">Delete</a>
+                    <a class="text-light" asp-action="Edit" asp-route-id="@item.IdViolazione">Modifica</a> |
+                    <a class="text-light" asp-action="Details" asp-route-id="@item.IdViolazione">Dettagli</a> |
+                    <a class="text-light" asp-action="Delete" asp-route-id="@item.IdViolazione">Cancella</a>
                 </td>
             </tr>
         }
