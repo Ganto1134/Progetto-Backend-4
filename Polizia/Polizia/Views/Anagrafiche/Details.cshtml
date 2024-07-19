@@ -1,0 +1,55 @@
+﻿@model Polizia.Models.Anagrafica
+
+@{
+    ViewData["Title"] = "Anagrafica Details";
+}
+
+<h1>Anagrafica Details</h1>
+
+<div>
+    <h4>Anagrafica</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cognome)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cognome)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Indirizzo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Indirizzo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Città)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Città)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CAP)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CAP)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Cod_Fisc)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Cod_Fisc)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model.IdAnagrafica">Edit</a> |
+    <a class="btn btn-primary" asp-action="Index">Back to List</a>
+</div>
+
